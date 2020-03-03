@@ -1,0 +1,31 @@
+include head.pug
+main
+	section.perfil
+		img(class="perfil__avatar" src="../images/avatar.jpg")
+		h2.perfil__nombre John Wick
+		h3.perfil__titulo Asesino Legendario
+		a(href="#" class="perfil__boton") Seguir
+		.estadistica--perfil <!-- No se pone perfil__estadistica porque este modulo se puede rehusar en otras partes del proyecto -->
+			+stats("12k", "Seguidores")
+			+stats("1.7k", "Siguiendo")
+			+stats("48", "Articulos")
+		.perfil__minibio
+			h2 Acerca de Mi
+			h3 Asesino a sueldo retirado y amante de perros
+		.ubicacion--perfil
+			i.fas.fa-map-marker-alt
+			h2 Estados Unidos
+			h3 227km Cerca
+		.galeria
+			h2 Mis Fotos
+			.galeria__foto-principal: img(src="../images/galeria1.jpg")
+			.galeria__fotos-adicionales
+				img(src="../images/galeria2.jpg" width="160")
+				img(src="../images/galeria3.jpg")
+				img(src="../images/galeria4.jpg")
+	aside.articulos
+		+article("Tecnología", "El origen del teclado QWERTY que (casi) todos usamos a diario","La máquina de escribir es hoy una pieza de coleccionista, y si no que le pregunten al actor Tom Hanks, cuya colección supera la cifra de 250 máquinas de escribir...")
+		+article("Ciencia", "6 mitos que la ciencia ha desmentido sobre el nuevo coronavirus","Hay una realidad muy preocupante: la difusión de información errada a través de las redes sociales, que en varias oportunidades ha generado pánico entre las personas. Es por ello que aprovecharemos esta oportunidad para desmentir algunos mitos en torno a este nuevo virus...")
+		+article("Videojuegos", "Jugamos a ‘Resident Evil 3 Remake’: Capcom vuelve a demostrar lo bien que juegan con la nostalgia","Para muchos, la primera generación de PlayStation y los juegos que le acompañaron fueron el primer punto de encuentro con los videojuegos. Por ello, en el imaginario colectivo, revivir esos momentos de la infancia y la adolescencia a día de hoy es un valor añadido que hace de la nostalgia un gran motor de ventas...")
+
+		
